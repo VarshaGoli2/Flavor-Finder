@@ -1,0 +1,140 @@
+/* Basic resets */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden; /* Disable scrolling */
+}
+
+/* Full page app container */
+.App {
+  text-align: center;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://images.squarespace-cdn.com/content/v1/611b3a86fb6a226aadffcf79/4e0ddbe1-fda3-4181-869e-0c665b1468d4/types+of+cuisines.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Background dim effect */
+.App::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black tint for dim effect */
+  z-index: -1;
+}
+
+/* Header styling */
+.header h1 {
+  font-size: 2rem; /* Adjust the font-size as needed */
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: inline-block;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+/* Content wrapper for form and result box */
+.content {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Styling for the RecipeCard form */
+.RecipeCard {
+  width: 400px;
+  border: 2px solid green;
+  border-radius: 10px;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Result box styling */
+.result-box {
+  width: 400px;
+  height: 565px;
+  text-align: left;
+  color: #333;
+  padding: 20px;
+  border: 2px solid green;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styling for input fields */
+input[type="text"], select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus, select:focus {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+/* Styling for labels */
+label {
+  display: block;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+/* Styling for the submit button */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Ensure equal sizing for the two main boxes */
+.RecipeCard, .result-box {
+  width: 400px;
+  height: 565px;
+  padding: 20px;
+  border: 2px solid green;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure that content appears above the dimmed background */
+.content, .header h1 {
+  position: relative;
+  z-index: 1;
+}

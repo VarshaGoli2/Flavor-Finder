@@ -1,0 +1,23 @@
+/* index.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+body {
+  background-color: #f8f9fa;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #ff4500; /* Bright orange for headings */
+}
+
+a {
+  color: #1e90ff; /* Dodger blue for links */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
